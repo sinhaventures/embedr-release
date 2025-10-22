@@ -9,4 +9,4 @@ Embedr is a modern, AI‑powered desktop IDE for Arduino and embedded developmen
 - Get the latest installers from this repository's Releases page
 
 ### Learn more
-- Visit the official website: https://embedr.cc
+- Visit the official website: https://embedr.app
