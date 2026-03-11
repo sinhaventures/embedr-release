@@ -1,0 +1,8 @@
+- Embedr now ships with its own built-in runtime, making setup and project tooling more consistent across platforms.
+- Added custom targets and a unified target selector so board and environment setup is faster and easier to manage.
+- Added better serial tooling and clearer live build and upload feedback while working on embedded projects.
+- Improved the library workflow with clearer states, better parsing, and a more streamlined interface.
+- Chat sessions now keep their own checkpoints independently of Git, making AI-assisted work more resilient.
+- Improved Linux support and stability, including fixes for sandbox and shared-memory issues on newer Ubuntu systems.
+- Refined project navigation, file explorer behavior, toolbar interactions, and default editor states across the app.
+- Fixed a broad set of migration, target configuration, and upload issues to make project setup more reliable.
