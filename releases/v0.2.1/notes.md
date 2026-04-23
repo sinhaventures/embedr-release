@@ -1,0 +1,6 @@
+- Added a much deeper PCB workflow, including editable schematics, clearer hardware guidance, and better project context while you work.
+- Improved project setup and initialization so Embedr can understand more kinds of repos and configure them more reliably.
+- Refined Git and history tools with a cleaner in-app workflow for reviewing changes, branches, and generated edits.
+- Made AI sessions more reliable with better handoff behavior, stronger auth and billing handling, and smoother long-running agent flows.
+- Improved runtime packaging and cross-platform release quality so the built-in tooling is more consistent on macOS, Windows, and Linux.
+- Polished the interface across the editor, onboarding, tool cards, file explorer, and notifications for a cleaner day-to-day experience.
