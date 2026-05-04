@@ -1,0 +1,6 @@
+- Added a new Board tab with richer PCB layout viewing, editing, and 3D preview support.
+- Improved schematics and PCB editing with better `.zen` language support, linting, and project-aware hardware guidance.
+- Made PCB automation more reliable, especially around live previews, cancellation, board refreshes, and applying results.
+- Improved AI chat reliability for very large conversations and moved more proxy work into the API gateway.
+- Refined Git, file explorer, pinned tabs, toast placement, and board toolbar interactions for a cleaner editing flow.
+- Fixed several board rendering issues, including unrouted nets, numeric pad net names, footprint transforms, and text rendering.
