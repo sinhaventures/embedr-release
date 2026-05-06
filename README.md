@@ -10,20 +10,34 @@ Embedr is a modern, AI‑powered desktop IDE for Arduino and embedded developmen
 macOS and Linux:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/sinhaventures/embedr-release/main/install.sh | bash
+curl -fsSL https://get.embedr.app | bash
 ```
 
 Windows:
 
 ```powershell
-irm https://raw.githubusercontent.com/sinhaventures/embedr-release/main/install.ps1 | iex
+irm https://get.embedr.app/install.ps1 | iex
 ```
 
 Specific version:
 
 ```bash
-curl -fsSL https://raw.githubusercontent.com/sinhaventures/embedr-release/main/install.sh | bash -s -- --version v0.2.1
+curl -fsSL https://get.embedr.app/install.sh | bash -s -- --version v0.2.1
 ```
+
+### Hosting
+
+This repository is configured for Cloudflare Pages. The build copies the root installer scripts into `dist/`, so:
+
+- `https://get.embedr.app/` redirects to `https://get.embedr.app/install.sh`
+- `https://get.embedr.app/install.sh` serves the macOS/Linux installer
+- `https://get.embedr.app/install.ps1` serves the Windows installer
+
+Cloudflare Pages settings:
+
+- Build command: `bash scripts/build-pages.sh`
+- Build output directory: `dist`
+- Custom domain: `get.embedr.app`
 
 ### Download
 - Get the latest installers from this repository's Releases page

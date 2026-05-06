@@ -6,7 +6,8 @@ REPO_NAME="embedr-release"
 REPO="$REPO_OWNER/$REPO_NAME"
 GITHUB_API="https://api.github.com/repos/$REPO"
 GITHUB_RELEASES="https://github.com/$REPO/releases"
-RAW_BASE="https://raw.githubusercontent.com/$REPO/main"
+INSTALLER_BASE="${EMBEDR_INSTALLER_BASE_URL:-https://get.embedr.app}"
+INSTALLER_BASE="${INSTALLER_BASE%/}"
 
 RED='\033[0;31m'
 GREEN='\033[0;32m'
@@ -40,8 +41,9 @@ usage() {
 Embedr desktop installer
 
 Usage:
-  curl -fsSL $RAW_BASE/install.sh | bash
-  curl -fsSL $RAW_BASE/install.sh | bash -s -- --version v0.2.1
+  curl -fsSL $INSTALLER_BASE | bash
+  curl -fsSL $INSTALLER_BASE/install.sh | bash
+  curl -fsSL $INSTALLER_BASE/install.sh | bash -s -- --version v0.2.1
 
 Options:
   --version VERSION   Install a specific release tag or version
@@ -159,7 +161,7 @@ if [ "$PLATFORM" = "macos" ] && [ "${EUID:-$(id -u)}" -ne 0 ]; then
         {
             printf '%s\n' '#!/usr/bin/env bash'
             printf '%s\n' "trap 'rm -f \"\$0\"; rmdir \"\$(dirname \"\$0\")\" 2>/dev/null || true' EXIT"
-            curl -fsSL "$RAW_BASE/install.sh"
+            curl -fsSL "$INSTALLER_BASE/install.sh"
         } > "$SCRIPT_TMP"
         chmod +x "$SCRIPT_TMP"
         exec sudo bash "$SCRIPT_TMP" "${ORIGINAL_ARGS[@]}"
