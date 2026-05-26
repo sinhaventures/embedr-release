@@ -3,5 +3,7 @@
 - Improved datasheet uploads, processing progress, encrypted PDF handling, and datasheet context in chats.
 - Improved schematic previews with clearer routing, labels, wire crossings, power symbols, and canvas behavior.
 - Added support for more AI model options, including ChatGPT Codex subscription models, Gemini 3.5 Flash, OpenRouter updates, and refreshed model details.
+- Added clearer handling for ChatGPT access on paid plans.
 - Improved command approvals, interrupted tool handling, storage sync, crash-reporting privacy behavior, and large-chat reliability.
 - Improved macOS release signing and notarization for smoother desktop distribution.
+- Improved release packaging so builds use the latest Embedr PCB runtime release.
