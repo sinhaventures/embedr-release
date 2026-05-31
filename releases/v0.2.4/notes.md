@@ -1,0 +1,5 @@
+- Improved PCB placement and routing automation reliability, including better live progress recovery when you return to a board.
+- Improved PCB automation run status, cancellation handling, revision tracking, and error reporting.
+- Sent richer KiCad project context to the managed PCB automation API by including related schematic files with board jobs.
+- Fixed ChatGPT subscription model streaming so long responses, tool calls, and final messages are less likely to lose accumulated output.
+- Kept PCB netlist inspection lighter and faster for agents by returning compact summaries instead of raw graph payloads.
