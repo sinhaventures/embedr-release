@@ -287,7 +287,6 @@ install_macos() {
 
     info "Copying Embedr to /Applications..."
     cp -R "$app_source" /Applications/
-    xattr -dr com.apple.quarantine "$install_path" 2>/dev/null || true
 
     success "Embedr $VERSION_TAG is installed"
     info "Opening Embedr..."
